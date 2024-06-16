@@ -70,22 +70,22 @@
 //4. Escribir una función llamada imprimirArreglo que reciba un arreglo e imprima cada elemento en una línea a parte:
 // escribe tu respuesta acá
 
-const imprimirArreglo = (data) => {
-  // for (const e of data) {
-  //   console.log(e);
-  // }
+// const imprimirArreglo = (data) => {
+// for (const e of data) {
+//   console.log(e);
+// }
 
-  // for (let index = 0; index < data.length; index++) {
-  //   console.log(data[index]);
-  // }
+// for (let index = 0; index < data.length; index++) {
+//   console.log(data[index]);
+// }
 
-  data.map((e) => {
-    console.log(e);
-  });
-};
+//   data.map((e) => {
+//     console.log(e);
+//   });
+// };
 
 // código de prueba
-console.log(imprimirArreglo([1, "Hola", 2, "Mundo"]));
+// console.log(imprimirArreglo([1, "Hola", 2, "Mundo"]));
 // 1
 // Hola
 // 2
@@ -185,19 +185,106 @@ console.log(imprimirArreglo([1, "Hola", 2, "Mundo"]));
 // Nota: Utiliza un ciclo en tu solución. Puedes asumir que el primer número va a ser menor que el segundo.
 
 // escribe tu respuesta acá
-const contarRango = (a, b) => {
+// const contarRango = (a, b) => {
+//   let count = 0;
+
+//   let i = a + 1;
+
+//   while (i < b) {
+//     count++;
+//     a++;
+//   }
+//   return count;
+// };
+
+// código de prueba
+// console.log(contarRango(1, 9)); // 7
+// console.log(contarRango(1332, 8743)); // 7410
+// console.log(contarRango(5, 6)); // 0
+////////////////////////////////////////////////////////////////////////////////////////
+
+// 8. Sumar rango de números
+// Escribir una función llamada sumarRango que reciba dos argumentos: número inicial y número final. La función debe retornar la suma de los números en ese rango (incluyéndolos).
+
+// Nota: puedes asumir que el número inicial va a ser menor o igual que el número final.
+
+// escribe tu respuesta acá
+
+// const sumarRango = (a, b) => {
+//   let result = 0;
+//   if (a !== b) {
+// option whit for loop //
+//   for (let i = a; i <= b; i++) {
+//     result = result + i;
+//   }
+
+// option whit while loop //
+//     while (a <= b) {
+//       result = result + a;
+//       a++;
+//     }
+//   } else {
+//     result = 0;
+//   }
+//   return result;
+// };
+
+// código de prueba
+// console.log(sumarRango(0, 10)); // 55
+// console.log(sumarRango(12, 14)); // 39
+// console.log(sumarRango(5, 5)); // 0
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 9. Número de aes (letra "a")
+// Escribir una función llamada numeroDeAes que reciba un string y retorne el número de veces que aparece la letra "a":
+// escribe tu respuesta acá
+
+// const numeroDeAes = (string) => {
+//   let count = 0;
+//   if (typeof string === "string") {
+//     let separar = string.split("");
+//     for (let i = 0; i < separar.length; i++) {
+//       if (separar[i] === "a") {
+//         count++;
+//       }
+//     }
+//   } else {
+//     return "check data";
+//   }
+//   return count;
+// };
+
+// código de prueba
+// console.log(numeroDeAes(10));
+// console.log(numeroDeAes("")); // 0
+// console.log(numeroDeAes("etinol")); // 0
+// console.log(numeroDeAes("abracadabra")); // 5
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 10. Número de caracteres
+// Escribir una función llamada numeroDeCaracteres que reciba un string y un caracter (un string de un caracter). La función debe retornar el número de veces que aparece el caracter en el string.
+// escribe tu respuesta acá
+
+const numeroDeCaracteres = (s, c) => {
   let count = 0;
 
-  let i = a + 1;
-
-  while (i < b) {
-    count++;
-    a++;
+  if (typeof s === "string" && typeof c === "string") {
+    let separar = s.split("");
+    for (let i = 0; i < separar.length; i++) {
+      if (separar[i] === c) {
+        count++;
+      }
+    }
+  } else {
+    return "verificar info";
   }
   return count;
 };
 
 // código de prueba
-console.log(contarRango(1, 9)); // 7
-console.log(contarRango(1332, 8743)); // 7410
-console.log(contarRango(5, 6)); // 0
+console.log(numeroDeCaracteres("Hola Mundo", "o")); // 2
+console.log(numeroDeCaracteres("MMMMM", "m")); // 0
+console.log(numeroDeCaracteres("eeee", "e")); // 4
+console.log(numeroDeCaracteres(55555, "e"));
+console.log(numeroDeCaracteres("55555"));
